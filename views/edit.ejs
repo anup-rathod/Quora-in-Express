@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+   
+</body>
+</html>
+
+<div class="container">
+    <h2>Edit Your Post</h2>
+    <p>Post id : <%= post.id %></p>
+    <p>Post username : @<%= post.username %></p>
+    <!--?_method=PATCH This is used bcz html form can have only get % post method to use extra method ?_method=PATCH with method post is used-->
+    <form method="post" action="/posts/<%= post.id %>?_method=PATCH" class="post-form" > 
+        <textarea name="content" id="" cols="30" rows="10" class="textarea-field"><%= post.content %></textarea> <br> <br>
+        <button class="submit-btn">Submit</button>
+    </form>
+</div>
